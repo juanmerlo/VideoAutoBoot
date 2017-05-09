@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+
+    tools:context="com.jmk.videoautoboot.MainActivity">
+
+
+    <TextView
+        android:text="@string/app_name"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:textSize="40dp"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        />
+
+    <com.jmk.videoautoboot.Buttons.SelectVideoButton
+        android:text=""
+        android:id="@+id/selectVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <com.jmk.videoautoboot.Buttons.InitServiceButton
+        android:text="@string/iniciar"
+        android:layout_marginTop="30dp"
+        android:id="@+id/iniciarServicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <com.jmk.videoautoboot.Buttons.StopServiceButton
+        android:text="@string/parar"
+        android:layout_marginTop="30dp"
+        android:id="@+id/pararServicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.jmk.videoautoboot.Buttons.OnBootCheckBox
+        android:text="@string/onboot"
+        android:id="@+id/onBootCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
