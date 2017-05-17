@@ -7,5 +7,6 @@
     <string name="noEstaElVideo">No existe la ruta del video.</string>
     <string name="servicioDetenido">Servicio detenido</string>
     <string name="backParaSalir">Presione atrás para volver al menú</string>
+    <string name="reproduciendo">Reproduciendo</string>
 
 </resources>

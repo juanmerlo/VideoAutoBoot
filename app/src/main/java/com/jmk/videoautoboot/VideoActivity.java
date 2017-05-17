@@ -125,9 +125,4 @@ public class VideoActivity extends AppCompatActivity {
 
     }
 
-
-
-
-
-
 }

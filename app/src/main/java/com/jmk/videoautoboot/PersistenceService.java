@@ -1,10 +1,11 @@
 package com.jmk.videoautoboot;
 
+import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.IBinder;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import java.util.Timer;
@@ -14,14 +15,26 @@ public class PersistenceService extends Service {
 
     TimerTask timerTask;
     Timer timer = new Timer();
+    NotificationManager mNotifyManager;
+    NotificationCompat.Builder builder;
+    int id = 1;
 
     @Override
     public void onCreate() {
-
+        super.onCreate();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+
+        // Se construye la notificación
+        builder = new NotificationCompat.Builder(this);
+        builder.setAutoCancel(true);
+        builder.setSmallIcon(android.R.drawable.ic_media_play);
+        builder.setContentTitle(getResources().getString(R.string.reproduciendo));
+        builder.setTicker(getResources().getString(R.string.reproduciendo));
+        startForeground(id,builder.build());
+        mNotifyManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
         timerTask = new TimerTask() {
             @Override
@@ -39,7 +52,6 @@ public class PersistenceService extends Service {
         };
 
         startWithDelay(intent.getIntExtra("delay",0));
-
 
         return START_STICKY;
     }
@@ -61,7 +73,6 @@ public class PersistenceService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        // TODO: Return the communication channel to the service.
         throw new UnsupportedOperationException("Not yet implemented");
     }
 }

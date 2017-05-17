@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 import com.jmk.videoautoboot.MainActivity;
 import com.jmk.videoautoboot.R;

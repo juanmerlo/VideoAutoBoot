@@ -2,12 +2,8 @@ package com.jmk.videoautoboot.Buttons;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
 
 import com.jmk.videoautoboot.MainActivity;
 import com.jmk.videoautoboot.PersistenceService;
@@ -34,8 +30,6 @@ public class InitServiceButton extends android.support.v7.widget.AppCompatButton
         context.startService(service);
         context.finish();
     }
-
-
 
 }
 

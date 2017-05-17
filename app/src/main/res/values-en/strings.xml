@@ -8,5 +8,6 @@
     <string name="noEstaElVideo">Video not found</string>
     <string name="servicioDetenido">Service stopped</string>
     <string name="backParaSalir">Press back button to return menu</string>
+    <string name="reproduciendo">Playing</string>
 
 </resources>

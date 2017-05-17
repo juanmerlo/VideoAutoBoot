@@ -3,7 +3,6 @@ package com.jmk.videoautoboot.Buttons;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.AttributeSet;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 import com.jmk.videoautoboot.MainActivity;
